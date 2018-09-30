@@ -1,0 +1,18 @@
+html
+	head
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+	body
+		nav.navbar.navbar-expand-sm.bg-light
+			a.nav-brand(href="#") Coder.Tokyo
+			ul.navbar-nav
+				li.nav-item
+					a.nav-link(href="#") Home
+				li.nav-item
+					a.nav-link(href="/users") User
+				p= user ? user.name : ""
+				li.nav-item
+					a.nav-link(href="/users") Cart: 
+				p= carts + " item"
+
+		
+		block content
